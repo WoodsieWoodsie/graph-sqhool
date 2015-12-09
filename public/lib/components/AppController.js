@@ -1,16 +1,16 @@
 import React from "react";
-import List from "./List";
+// import List from "./List";
 
 class AppController extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { bookmarks: [] };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { bookmarks: [] };
+  // }
   render() {
     return (
       <div className="app">
-        <h2>Bookmarks!</h2>
-        <List bookmarks={this.state.bookmarks} />
+        <h2>React-School</h2>
+        
       </div>
     );
   }

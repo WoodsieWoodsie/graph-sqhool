@@ -23,12 +23,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
+import schema from "./data/schema";
+import GraphQLHTTP from "express-graphql";
+
+app.use("/graphql", GraphQLHTTP({
+  schema,
+  graphiql: true
+}));
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
+
 
 // error handlers
 
